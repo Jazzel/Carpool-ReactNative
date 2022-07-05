@@ -9,7 +9,10 @@ import {
 } from "react-native";
 import { WebView } from "react-native-webview";
 
-const CarpoolScreen = ({navigation}) => {
+const CarpoolScreen = ({ navigation }) => {
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+
   return (
     <View style={{ backgroundColor: "#DEDCDC", height: "100%" }}>
       <View style={styles.StatusBar}>
@@ -25,7 +28,7 @@ const CarpoolScreen = ({navigation}) => {
             source={require("./../assets/back.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20}}>Carpool</Text>
+        <Text style={{ fontSize: 20 }}>Carpool</Text>
       </View>
       <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
@@ -47,14 +50,16 @@ const CarpoolScreen = ({navigation}) => {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              onChangeText={(from) => setFrom(from)}
+              value={from}
+              onChangeText={(value) => setFrom(value)}
             />
           </View>
           <Text>To: </Text>
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              onChangeText={(from) => setFrom(from)}
+              value={to}
+              onChangeText={(value) => setTo(value)}
             />
           </View>
         </View>

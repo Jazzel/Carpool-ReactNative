@@ -9,7 +9,7 @@ import {
 import React, { useState } from "react";
 import { WebView } from "react-native-webview";
 
-const BookRideScreen = ({navigation}) => {
+const BookRideScreen = ({ navigation }) => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
 
@@ -28,7 +28,7 @@ const BookRideScreen = ({navigation}) => {
             source={require("./../assets/back.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20}}>Book a Ride</Text>
+        <Text style={{ fontSize: 20 }}>Book a Ride</Text>
       </View>
       <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
@@ -58,6 +58,7 @@ const BookRideScreen = ({navigation}) => {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
+              value={to}
               onChangeText={(value) => setTo(value)}
             />
           </View>
