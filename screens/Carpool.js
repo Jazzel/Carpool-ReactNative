@@ -9,9 +9,9 @@ import {
 } from "react-native";
 import { WebView } from "react-native-webview";
 
-const CarpoolScreen = () => {
+const CarpoolScreen = ({navigation}) => {
   return (
-    <View style={{ backgroundColor: "#DEDCDC", height: "100vh" }}>
+    <View style={{ backgroundColor: "#DEDCDC", height: "100%" }}>
       <View style={styles.StatusBar}>
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
@@ -25,9 +25,9 @@ const CarpoolScreen = () => {
             source={require("./../assets/back.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20, fontWeight: "700" }}>Carpool</Text>
+        <Text style={{ fontSize: 20}}>Carpool</Text>
       </View>
-      <View style={{ height: "100vh", overflowY: "hidden" }}>
+      <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
           style={{ backgroundColor: "red", width: "100%" }}
           source={{ uri: "https://www.google.com/maps/" }}

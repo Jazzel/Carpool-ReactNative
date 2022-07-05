@@ -4,7 +4,7 @@ import { StyleSheet, View, TouchableOpacity, Text, Image } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View style={{ backgroundColor: "#DEDCDC", height: "100vh" }}>
+    <View style={{ backgroundColor: "#DEDCDC", height: "100%" }}>
       <View style={styles.StatusBar}>
         <TouchableOpacity
           onPress={() => navigation.navigate("Login")}
@@ -18,7 +18,7 @@ const HomeScreen = ({ navigation }) => {
             source={require("./../assets/logout.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20, fontWeight: "700" }}>Dashboard</Text>
+        <Text style={{ fontSize: 20 }}>Dashboard</Text>
       </View>
       <View style={{ paddingVertical: 40, paddingHorizontal: 30 }}>
         <View style={{}}>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 20,
-    fontWeight: 600,
+   
     textTransform: "uppercase",
   },
 });

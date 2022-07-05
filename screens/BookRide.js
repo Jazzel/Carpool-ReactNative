@@ -9,12 +9,12 @@ import {
 import React, { useState } from "react";
 import { WebView } from "react-native-webview";
 
-const BookRideScreen = () => {
+const BookRideScreen = ({navigation}) => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
 
   return (
-    <View style={{ backgroundColor: "#DEDCDC", height: "100vh" }}>
+    <View style={{ backgroundColor: "#DEDCDC", height: "100%" }}>
       <View style={styles.StatusBar}>
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
@@ -28,9 +28,9 @@ const BookRideScreen = () => {
             source={require("./../assets/back.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20, fontWeight: "700" }}>Book a Ride</Text>
+        <Text style={{ fontSize: 20}}>Book a Ride</Text>
       </View>
-      <View style={{ height: "100vh", overflowY: "hidden" }}>
+      <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
           style={{ backgroundColor: "red", width: "100%" }}
           source={{ uri: "https://www.google.com/maps/" }}
@@ -49,15 +49,16 @@ const BookRideScreen = () => {
           <Text>From: </Text>
           <View style={styles.inputView}>
             <TextInput
+              value={from}
               style={styles.TextInput}
-              onChangeText={(from) => setFrom(from)}
+              onChangeText={(value) => setFrom(value)}
             />
           </View>
           <Text>To: </Text>
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              onChangeText={(from) => setFrom(from)}
+              onChangeText={(value) => setTo(value)}
             />
           </View>
         </View>
