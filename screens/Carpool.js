@@ -32,7 +32,7 @@ const CarpoolScreen = ({ navigation }) => {
       </View>
       <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
-          style={{ backgroundColor: "red", width: "100%" }}
+          style={{ backgroundColor: "white", width: "100%" }}
           source={{ uri: "https://www.google.com/maps/" }}
         />
         <View
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     height: 45,
     marginBottom: 20,
 
-    alignItems: "left",
+    alignItems: "center",
   },
   TextInput: {
     height: 50,

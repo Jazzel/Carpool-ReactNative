@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     height: 200,
-    borderRadius: "10px",
+    borderRadius: 10,
     boxShadow: "0 .8rem 1rem 0 rgba(0,0,0,.15)",
     width: "100%",
     backgroundColor: "white",
