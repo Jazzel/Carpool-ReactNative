@@ -1,5 +1,6 @@
 import {
   Image,
+  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -8,6 +9,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { WebView } from "react-native-webview";
+import { StatusBar } from "expo-status-bar";
 
 const BookRideScreen = ({ navigation }) => {
   const [from, setFrom] = useState("");
@@ -76,6 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     boxShadow: "0 .8rem 1rem 0 rgba(0,0,0,.15)",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   inputView: {
     marginTop: 10,

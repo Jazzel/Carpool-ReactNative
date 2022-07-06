@@ -1,6 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, View, TouchableOpacity, Text, Image } from "react-native";
+import {
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Text,
+  Image,
+  Platform,
+} from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -60,6 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     boxShadow: "0 .8rem 1rem 0 rgba(0,0,0,.15)",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   btn: {
     display: "flex",
@@ -75,7 +83,7 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 20,
-   
+
     textTransform: "uppercase",
   },
 });

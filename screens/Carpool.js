@@ -1,3 +1,4 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   StyleSheet,
@@ -6,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Platform,
 } from "react-native";
 import { WebView } from "react-native-webview";
 
@@ -76,6 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     boxShadow: "0 .8rem 1rem 0 rgba(0,0,0,.15)",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   inputView: {
     marginTop: 10,
