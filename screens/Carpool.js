@@ -30,7 +30,7 @@ const CarpoolScreen = ({ navigation }) => {
             source={require("./../assets/back.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20 }}>Book a Ride</Text>
+        <Text style={{ fontSize: 20 }}>Carpool</Text>
       </View>
       <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
