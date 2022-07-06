@@ -3,8 +3,14 @@
     "name": "Carpool",
     "slug": "Carpool",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "description": "Book rides, Enjoy carpooling",
+    "ios": {
+      "supportsTablet": true
+    },
+
+    "android": {
+      "package": "com.company.carpool"
+    }
   }
 }

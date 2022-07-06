@@ -1,15 +1,15 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
 import {
+  Image,
+  Platform,
   StyleSheet,
   Text,
-  View,
-  TouchableOpacity,
-  Image,
   TextInput,
-  Platform,
+  TouchableOpacity,
+  View,
 } from "react-native";
+import React, { useState } from "react";
 import { WebView } from "react-native-webview";
+import { StatusBar } from "expo-status-bar";
 
 const CarpoolScreen = ({ navigation }) => {
   const [from, setFrom] = useState("");
@@ -30,7 +30,7 @@ const CarpoolScreen = ({ navigation }) => {
             source={require("./../assets/back.png")}
           />
         </TouchableOpacity>
-        <Text style={{ fontSize: 20 }}>Carpool</Text>
+        <Text style={{ fontSize: 20 }}>Book a Ride</Text>
       </View>
       <View style={{ height: "100%", overflowY: "hidden" }}>
         <WebView
@@ -51,8 +51,8 @@ const CarpoolScreen = ({ navigation }) => {
           <Text>From: </Text>
           <View style={styles.inputView}>
             <TextInput
-              style={styles.TextInput}
               value={from}
+              style={styles.TextInput}
               onChangeText={(value) => setFrom(value)}
             />
           </View>
